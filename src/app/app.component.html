@@ -1,7 +1,13 @@
 <h1>
   {{title}}
 </h1>
-
-
-<app-client></app-client>
-<app-voyage></app-voyage>
+<nav>
+<a routerLink="tableaudebord">Dashboard</a>
+<a routerLink="clients/listeClient">Liste de clients</a>
+</nav>
+<app-dashboard>
+</app-dashboard>
+<router-outlet>
+</router-outlet>
+<!--<app-client></app-client>
+<app-voyage></app-voyage>-->

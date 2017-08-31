@@ -9,9 +9,10 @@ import { menuComponent } from './menu/app.menuComponent';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './main.html',
+  //templateUrl: './main.html',
+ templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  //title = 'app works!';
 }

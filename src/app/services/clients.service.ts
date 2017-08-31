@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+
+import 'rxjs/add/operator/map';
 
 import{Client} from '../entities/client';
 import{CLIENTS} from './mock-clients';
@@ -6,7 +9,18 @@ import{CLIENTS} from './mock-clients';
 @Injectable()
 export class ClientsService {
 
-  getClients():Client []{
+  constructor(private http : Http) { }
+
+  getClients(){
+
+    let link = 'http://localhost:8080/projet_final/mvc/clients/listeClient/';
+
+    return this.http.get(link).map(res => res.json());
+  }
+
+
+
+/**  getClients():Client []{
     return CLIENTS;
   }
 
@@ -20,6 +34,7 @@ export class ClientsService {
       return resultat;
   }
 
-  constructor() { }
 
+  constructor() { }
+*/
 }

@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Client } from '../../entities/client';
+import{ CLIENTS } from '../../services/mock-clients';
+import {ClientsService} from '../../services/clients.service';
+
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -7,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private clientService: ClientsService) { }
 
-  ngOnInit() {
+
+  ngOnInit(): void {
+    this.clientService.getClients().subscribe(res => this.clients = res);
+
   }
-
+  clients: Client []=[];
 }
