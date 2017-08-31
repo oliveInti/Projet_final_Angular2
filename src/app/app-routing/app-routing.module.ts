@@ -5,6 +5,7 @@ import { Route, RouterModule } from '@angular/router';
 import { DashboardComponent } from '../components/dashboard/dashboard.component';
 import { ClientComponent } from '../components/client/client.component';
 import { VoyageComponent } from '../components/voyage/voyage.component';
+import { AjoutClientComponent } from '../components/ajout-client/ajout-client.component';
 
 
 const routes: Route [] = [
@@ -12,6 +13,7 @@ const routes: Route [] = [
 { path: 'dashboard', redirectTo: 'tableaudebord',},
 { path: 'tableaudebord', component: DashboardComponent,},
 { path: 'clients/listeClient', component: ClientComponent},
+{ path: 'clients/ajout',component: AjoutClientComponent},
 
 ]
 

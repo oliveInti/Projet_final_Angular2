@@ -17,6 +17,8 @@ import { ClientComponent } from './components/client/client.component';
 import{ClientsService} from './services/clients.service';
 import { VoyageComponent } from './components/voyage/voyage.component';
 import { VoyagesService } from './services/voyages.service';
+import { AjoutClientComponent } from './components/ajout-client/ajout-client.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
 
@@ -31,7 +33,9 @@ import { VoyagesService } from './services/voyages.service';
     DashboardComponent,
     EditionClientComponent,
     ClientComponent,
-    VoyageComponent
+    VoyageComponent,
+    AjoutClientComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
