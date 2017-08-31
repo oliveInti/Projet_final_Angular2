@@ -15,6 +15,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EditionClientComponent } from './components/edition-client/edition-client.component';
 import { ClientComponent } from './components/client/client.component';
 import{ClientsService} from './services/clients.service';
+import { VoyageComponent } from './components/voyage/voyage.component';
+import { VoyagesService } from './services/voyages.service';
 
 @NgModule({
 
@@ -28,7 +30,8 @@ import{ClientsService} from './services/clients.service';
     navComponent,
     DashboardComponent,
     EditionClientComponent,
-    ClientComponent
+    ClientComponent,
+    VoyageComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import{ClientsService} from './services/clients.service';
   ],
   providers: [
     ClientsService,
+    VoyagesService,
   ],
   bootstrap: [AppComponent]
 })
