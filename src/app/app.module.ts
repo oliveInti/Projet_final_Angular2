@@ -11,7 +11,10 @@ import { contentAreaComponent } from './contentArea/app.contentAreaComponent';
 import { footerComponent } from './footer/app.footerComponent';
 import { aboutComponent } from './about/app.aboutComponent';
 import { menuComponent } from './menu/app.menuComponent';
-
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { EditionClientComponent } from './components/edition-client/edition-client.component';
+import { ClientComponent } from './components/client/client.component';
+import{ClientsService} from './services/clients.service';
 
 @NgModule({
 
@@ -22,7 +25,10 @@ import { menuComponent } from './menu/app.menuComponent';
     footerComponent,
     aboutComponent,
     menuComponent,
-    navComponent
+    navComponent,
+    DashboardComponent,
+    EditionClientComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,9 @@ import { menuComponent } from './menu/app.menuComponent';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    ClientsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
