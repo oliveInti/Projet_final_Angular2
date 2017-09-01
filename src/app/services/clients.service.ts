@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import{Client} from '../entities/client';
-import{CLIENTS} from './mock-clients';
+//import{CLIENTS} from './mock-clients';
 
 @Injectable()
 export class ClientsService {
