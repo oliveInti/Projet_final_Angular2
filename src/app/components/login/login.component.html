@@ -3,9 +3,9 @@
     <form name="form" (ngSubmit)="f.form.valid && creer()" #f="ngForm" novalidate>
 
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !mail.valid }">
-            <label for="mail">mail</label>
+            <label for="mail">Mail</label>
             <input type="text" class="form-control" name="mail" [(ngModel)]="client.mail" #mail="ngModel" required />
-            <div *ngIf="f.submitted && !mail.valid" class="help-block">mail obligatoire</div>
+            <div *ngIf="f.submitted && !mail.valid" class="help-block">Mail obligatoire</div>
         </div>
 
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !mdp.valid }">
@@ -13,8 +13,6 @@
             <input type="text" class="form-control" name="mdp" [(ngModel)]="client.mdp" #mdp="ngModel" required />
             <div *ngIf="f.submitted && !mdp.valid" class="help-block">Mot de passe obligatoire</div>
         </div>
-
->
 
         <div class="form-group">
             <button [disabled]="loading">Login</button>

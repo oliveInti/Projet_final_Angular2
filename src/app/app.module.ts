@@ -19,6 +19,7 @@ import { VoyageComponent } from './components/voyage/voyage.component';
 import { VoyagesService } from './services/voyages.service';
 import { AjoutClientComponent } from './components/ajout-client/ajout-client.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthentificationService } from './services/authentification.service';
 
 @NgModule({
 
@@ -35,6 +36,7 @@ import { LoginComponent } from './components/login/login.component';
     ClientComponent,
     VoyageComponent,
     AjoutClientComponent,
+    LoginComponent,
     LoginComponent
   ],
   imports: [
@@ -55,6 +57,7 @@ import { LoginComponent } from './components/login/login.component';
   providers: [
     ClientsService,
     VoyagesService,
+    AuthentificationService,
   ],
   bootstrap: [AppComponent]
 })
