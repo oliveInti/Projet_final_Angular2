@@ -17,9 +17,11 @@ import { ClientComponent } from './components/client/client.component';
 import{ClientsService} from './services/clients.service';
 import { VoyageComponent } from './components/voyage/voyage.component';
 import { VoyagesService } from './services/voyages.service';
+import { CommandesService } from './services/commandes.service';
 import { AjoutClientComponent } from './components/ajout-client/ajout-client.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthentificationService } from './services/authentification.service';
+import { AjoutCommandeComponent } from './components/ajout-commande/ajout-commande.component';
 
 @NgModule({
 
@@ -37,11 +39,8 @@ import { AuthentificationService } from './services/authentification.service';
     VoyageComponent,
     AjoutClientComponent,
     LoginComponent,
-<<<<<<< HEAD
-    CommandeComponent
-=======
-    LoginComponent
->>>>>>> f6dd778b018d43bda438fee6dc50618fc4c1744c
+    LoginComponent,
+    AjoutCommandeComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +60,7 @@ import { AuthentificationService } from './services/authentification.service';
   providers: [
     ClientsService,
     VoyagesService,
+    CommandesService,
     AuthentificationService,
   ],
   bootstrap: [AppComponent]

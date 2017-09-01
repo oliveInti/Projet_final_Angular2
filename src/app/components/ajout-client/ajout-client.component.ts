@@ -13,20 +13,16 @@ import{ClientsService} from '../../services/clients.service';
 })
 export class AjoutClientComponent implements OnInit {
 
-  client : Client;
+  client : Client=new Client();
   constructor(private clientService: ClientsService ) { }
 
   ngOnInit() {
   }
 creer(){
-//this.client.nom="oooo";
-//this.client.prenom="erty";
-//this.client.mail="r@r";
-//this.client.mdp="edzcsc";
-//this.client.admin=true;
 
-this.clientService.creer(this.client).subscribe(rep=>{console.log("Client créer : "+rep)});
+      this.clientService.creer(this.client).subscribe(rep=>{console.log("Client créer : "+rep)});
+      //this.clientService.creer(this.client);
+      console.log(this.client);
 
-
-}
+  }
 }

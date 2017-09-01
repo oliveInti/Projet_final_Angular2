@@ -17,6 +17,7 @@ export class ClientsService {
 
     return this.http.get(link).map(res => res.json());
   }
+  
 creer(client: Client){
 
   let link='http://localhost:8080/projet_final/mvc/clients/ajout/';

@@ -1,0 +1,31 @@
+<p>
+  ajout-commande works! Hé ouais maggle
+</p>
+  
+<form class="form" (submit)="creerCommande()"  #f="ngForm">
+   <fieldset>
+     <legend>General Information</legend>
+                  <div>
+                      <label for="agence">Agence</label>
+                      <input type="text" name="agence" required [(ngModel)]="commande.agence" ngControl="agence" >
+                  </div>
+                  <div>
+                      <label for="nbAdulte">Le nombre d'adulte</label>
+                      <input type="text" name="nbAdulte" required [(ngModel)]="commande.nbAdulte" ngControl="nbAdulte">
+                  </div>
+                  <div>
+                    <label for="nbEnfant">Le nombre d'enfant</label>
+                    <input type="text" name="nbEnfant" required [(ngModel)]="commande.nbEnfant" ngControl="nbEnfant">
+                </div>
+                <div>
+                  <!--<label for="prix">Le prix total</label>
+                  <output type="text" name="prix" required [(ngModel)]="commande.prixTotal" ngControl="prix">
+                  -->
+              </div>
+              </fieldset>
+
+              <div>
+                  <button [disabled]="!f.valid">Reserver</button>
+                 <!-- <button type="button" class="btn btn-default" (click)="cancel()"><i class="fa fa-save"></i> Annuler</button>-->
+              </div>
+</form>
